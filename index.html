@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form in JS</title>
+    </head>
+    <body>
+        <from onsubmit="return check()">
+            Name: <input id="name"><br>
+            Age: <input id="age"><br>
+            <button type="submit">Submit</button>
+        </from>
+
+        <script>
+            function check() {
+                var name = document.getElementById("name");
+                var age = document.getElementById("age");
+
+                if (!name.value.trim()) {
+                    alert("Enter name");
+                    return false;
+                }
+                if(!age.value) {
+                    alert("Enter age");
+                    return false;
+                }
+                alert("Submitted!");
+                return true;
+            }
+        </script>
+    </body>
+</html>
